@@ -9,8 +9,13 @@ public class oppgo2 {
         Scanner input = new Scanner(System.in);
         System.out.println("En eller flere karakterer?: ");
         String karakterer = input.nextLine();
-        if(karakterer.toLowerCase() == "en") {
 
+        if(!karakterer.equalsIgnoreCase("en") && !karakterer.equalsIgnoreCase("flere") ) {
+            System.out.println("Ikkje valgt en eller flere.");
+
+        }
+
+        if(karakterer.equalsIgnoreCase("en")) {
 
             System.out.println("Poengsum?: ");
             int poeng = input.nextInt();
@@ -49,7 +54,9 @@ public class oppgo2 {
                 System.out.println("Ugyldig poengsum.");
             }
         }
-        if(karakterer.toLowerCase() == "flere");
+
+
+        if(karakterer.equalsIgnoreCase("flere")) {
 
         int i = 0;
             while(i < 10)
@@ -97,6 +104,12 @@ public class oppgo2 {
             if (poeng < 0) {
 
                 System.out.println("Ugyldig poengsum, skriv inn på nytt.");
+
+            }
+
+
+
+
 
             }
         }
